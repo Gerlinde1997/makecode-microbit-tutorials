@@ -1,5 +1,6 @@
 {
     "name": "makecode-microbit-tutorials",
+    "version": "0.1.0",
     "description": "",
     "dependencies": {
         "core": "*",
