@@ -81,7 +81,7 @@ Super gedaan! Jouw geschreven code wordt nu goed uitgevoerd door de micro:bit.
 
 
 *Werkt het niet? Vraag dan iemand van de begeleiding om hulp.*
-![connected](https://raw.githubusercontent.com/Gerlinde1997/makecode-microbit-tutorials/main/docs/static/trello/connect_2.png)
+![connected](https://raw.githubusercontent.com/Gerlinde1997/makecode-microbit-tutorials/master/docs/static/trello/connect_2.png)
 
 ## Afsluiting
 Gefeliciteerd! Je hebt zojuist jouw eerste programma voor de micro:bit gemaakt en uitgevoerd.  
