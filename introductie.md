@@ -28,7 +28,7 @@ Het blok is nu geel en doet nog niks.
 Zie jij ook het verschil in vorm tussen het ``||basic:forever||`` en het ``||basic: show number||`` blok?  
 In de volgende stap leer je wat dat verschil betekent.
 
-![blocks in workspace](/static/editor_tutorial1.png)
+![blocks in workspace](https://raw.githubusercontent.com/Gerlinde1997/makecode-microbit-tutorials/master/docs/static/editor_tutorial1.png)
 
 
 ## Stap 4
