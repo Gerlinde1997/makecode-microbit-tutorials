@@ -14,7 +14,8 @@
         "README.md",
         "introductie.md",
         "tutorial-info-cache.json",
-        "naamkaart.md"
+        "naamkaart.md",
+        "rijden.md"
     ],
     "testFiles": [
         "test.ts"
