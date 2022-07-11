@@ -11,10 +11,12 @@ In de werkruimte zie je weer de twee containerblokken
 Klik nu in de **blokkenlade** op de categorie ``||maqueen:Maqueen||``. 
 *In deze categorie staan de blokken die speciaal voor de Maqueen robot zijn.*
 Sleep hieruit het blok ``||maqueen: motor ... move ... at speed ...||`` en 
-plaats die in het ``||basic:on start||`` blok.
+plaats die in het ``||basic:forever||`` blok.
 
 ```blocks
-maqueen.motorRun(maqueen.Motors.Left, maqueen.Dir.CW, 0)
+basic.forever(function () {
+    maqueen.motorRun(maqueen.Motors.Left, maqueen.Dir.CW, 0)
+})
 ```
 
 ## Stap 2
@@ -25,7 +27,9 @@ Vul deze gegevens in op het ``||maqueen: motor ... move ... at speed ...||`` blo
 Zet de Maqueen aan en hij gaat rijden!
 
 ```blocks
-maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CW, 100)
+basic.forever(function () {
+    maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CW, 100)
+})
 ```
 
 ## Stap 3 
@@ -42,10 +46,12 @@ Sleep uit de **blokkenlade** van de categorie ``||logic:Logic||`` het ruitvormig
 Deze klik je op de true van het ``||logic: if ... then||`` blok. Hier kan je in de volgende stap de juiste waardes invullen om de Maqueen te laten doen wat jij wilt.  
 
 ```blocks
-maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CW, 100)
-if (0 == 0) {
-	
-}
+basic.forever(function () {
+    maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CW, 100)
+    if (0 == 0) {
+        
+    }
+})
 ```
 
 ## Stap 4
@@ -65,10 +71,12 @@ Als (If) de ulstrasonic sensor een afstand meet kleiner dan (<) 10 cm, dan (then
 
 
 ```blocks
-maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CW, 100)
-if (maqueen.Ultrasonic(PingUnit.Centimeters) < 10) {
-    maqueen.motorStop(maqueen.Motors.All)
-}
+basic.forever(function () {
+    maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CW, 100)
+    if (maqueen.Ultrasonic(PingUnit.Centimeters) < 10) {
+        maqueen.motorStop(maqueen.Motors.All)
+    }
+})
 ```
 
 
