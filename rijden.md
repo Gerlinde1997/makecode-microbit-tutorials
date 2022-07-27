@@ -37,8 +37,9 @@ Zoals je gemerkt zult hebben, rijd de Maqueen nu alleen vooruit en stopt die nie
 Om hem te laten stoppen als die iets tegenkomt ga je nu gebruik maken van o.a. logica codeblokken.  
 
 Klik in de **blokkenlade** op de categorie ``||logic:Logic||``.
-Sleep hieruit het blok ``||logic: if ... then||`` en plaats die in het ``||basic:on start||`` blok, onder het
-blok ``||maqueen: motor ... move at speed ...||`` . 
+Sleep hieruit het blok ``||logic: if ... then||`` blok.  
+Haal ``||maqueen: motor ... move ... at speed ...||`` uit het ``||basic:forever||`` blok en stop ``||logic: if ... then||`` erin.  
+
 Je ziet op dit blok een ruitvorm met true erin staan. In makeCode is de ruit een comparison (vergelijking).  
 Als (if) de vergelijking waar (true) is, dan (then) wordt de code in dat blok uitgevoerd.  
 
@@ -47,7 +48,6 @@ Deze klik je op de true van het ``||logic: if ... then||`` blok. Hier kan je in 
 
 ```blocks
 basic.forever(function () {
-    maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CW, 100)
     if (0 == 0) {
         
     }
@@ -61,20 +61,23 @@ Pak uit ``||maqueen:Maqueen||`` het ronde blok ``||maqueen: read ultrasonic sens
 Dit blok klik je in de linker 0. Klik dan op het **=** teken en verander deze in **<**. Daarna vul je **10** in op de rechter 0. 
 Pak nu uit ``||maqueen:Maqueen||`` het blok ``||maqueen: motor ... stop||``. Klik dit blok in het ``||logic: if ... then||`` blok. 
 Verander nu op dat blok **Left** in **All**. 
-Als je nu je hele code leest staat er:  
-Wanneer het programma begint (on Start) rijd de Maqueen met alle (All) motoren aan, vooruit (Forward) op en snelheid (speed) van 100.  
-Als (If) de ulstrasonic sensor een afstand meet kleiner dan (<) 10 cm, dan (then) stopt de Maqueen alle motoren.  
+Bij ``||logic: if ... then||`` hoort ook een stuk code voor **else**. Druk hiervoor op het plusje links onder op het ``||logic: if ... then||``.  
+In dit geval wil je dat Maqueen vooruit rijd, als die verder dan 10 cm afstand van een voorwerp is. Oftewel,
+als (If) Maqueen dichterbij dan 10 cm is van een voorwerp is, dan (then) stopt hij. Anders (else) rijd hij voorruit.  
+Sleep nu het ``||maqueen: motor ... move ... at speed ...||`` in het else blok.  
 
-``||Download||`` dit stuk code op de micro:Maqueen en kijk of die optijd stopt!
+
+``||Download||`` dit stuk code op de micro:Maqueen en kijk of die optijd stopt!  
 
 *Kom je er niet uit? Kijk dan bij de hint en vraag eventueel hulp aan een begeleider*
 
 
 ```blocks
 basic.forever(function () {
-    maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CW, 100)
     if (maqueen.Ultrasonic(PingUnit.Centimeters) < 10) {
         maqueen.motorStop(maqueen.Motors.All)
+    } else {
+        maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CW, 100)
     }
 })
 ```
