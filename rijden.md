@@ -22,7 +22,7 @@ basic.forever(function () {
 ## Stap 2
 Om Maqueen recht vooruit te laten rijden, moet je wat aanpassingen doen aan het ``||maqueen: motor ... move ... at speed ...||`` blok.  
 Beide motoren (All) moeten vooruit (Forward) op een snelheid (speed) van 100.  
-Vul deze gegevens in op het ``||maqueen: motor ... move ... at speed ...||`` blok en ``||Download||`` dit stukje code op de micro:Maqueen.  
+Vul deze gegevens in op het ``||maqueen: motor ... move ... at speed ...||`` blok en ``|Download|`` dit stukje code op de micro:Maqueen.  
 
 Zet de Maqueen aan en hij gaat rijden!
 
@@ -33,18 +33,22 @@ basic.forever(function () {
 ```
 
 ## Stap 3 
-Zoals je gemerkt zult hebben, rijd de Maqueen nu alleen vooruit en stopt die niet als de iets tegenkomt.  
-Om hem te laten stoppen als die iets tegenkomt ga je nu gebruik maken van logica blokken.  
+Maqueen rijd nu alleen vooruit en stopt die niet als de iets tegenkomt.  
+Om hem te laten stoppen als die iets tegenkomt, ga je nu gebruik maken van logica blokken.  
 
 Klik in de **blokkenlade** op de categorie ``||logic:Logic||``.
 Sleep hieruit het blok ``||logic: if ... then||`` blok.  
-Haal ``||maqueen: motor ... move ... at speed ...||`` uit het ``||basic:forever||`` blok en stop ``||logic: if ... then||`` erin.  
+Haal ``||maqueen: motor ... move ... at speed ...||`` uit het ``||basic:forever||`` blok.    
+*Laat dit blok wel in je werkruimte staan. Je hebt hem later nog nodig.*    
+Plaats ``||logic: if ... then||`` in ``||basic:forever||``.      
 
 Je ziet op dit blok een ruitvorm met true erin staan. In makeCode is de ruit een comparison (vergelijking).  
 Als (if) de vergelijking waar (true) is, dan (then) wordt de code in dat blok uitgevoerd.  
 
 Sleep uit de **blokkenlade** van de categorie ``||logic:Logic||`` het ruitvormige blok ``||logic: 0 = 0||``.  
-Deze klik je op de true van het ``||logic: if ... then||`` blok. Hier kan je in de volgende stap de juiste waardes invullen om de Maqueen te laten doen wat jij wilt.  
+Deze klik je op de true van het ``||logic: if ... then||`` blok.     
+
+In de volgende stap zal je hier de juiste waardes gaan invullen om hem te laten doen wat jij wilt.     
 
 ```blocks
 basic.forever(function () {
@@ -55,23 +59,30 @@ basic.forever(function () {
 ```
 
 ## Stap 4
-In deze stap ga je gebruik maken van de 'ogen' van de Maqueen, de ultrasonic sensoren. 
-Het doel van deze stap is dat Maqueen stopt als die een voorwerp 'ziet' dichterbij dan 10 cm. 
+Nu ga je gebruik maken van de 'ogen' van de Maqueen, de ultrasonic sensoren. 
+Je gaat nu eerst ervoor zorgen dat Maqueen stopt als die een voorwerp 'ziet' dichterbij dan 10 cm. 
 Pak uit ``||maqueen:Maqueen||`` het ronde blok ``||maqueen: read ultrasonic sensor||``.  
-Dit blok klik je in de linker 0. Klik dan op het **=** teken en verander deze in **<**. Daarna vul je **10** in op de rechter 0. 
+Dit blok klik je in de linker 0. Klik dan op het **is** teken (=) en verander deze in het **kleiner dan** (<) teken.    
+Daarna vul je **10** in op de rechter 0. 
 Pak nu uit ``||maqueen:Maqueen||`` het blok ``||maqueen: motor ... stop||``. Klik dit blok in het ``||logic: if ... then||`` blok. 
 Verander nu op dat blok **Left** in **All**.  
+
+```blocks
+basic.forever(function () {
+    if (maqueen.Ultrasonic(PingUnit.Centimeters) < 10) {
+        
+    }
+})
+```
 
 
 ## Stap 5
 Bij ``||logic: if ... then||`` hoort ook een stuk code voor zo niet ... dan (else).    
 Druk hiervoor op het plusje links onder op het ``||logic: if ... then||``.  
-In dit geval wil je dat Maqueen vooruit rijd, als die niet dichterbij dan 10cm van een obstakel is. Oftewel,
-als (If) Maqueen dichterbij dan 10 cm is van een voorwerp is, dan (then) stopt hij. Zo niet (else) rijd hij voorruit.  
+In dit geval wil je: Als (If) Maqueen dichterbij dan 10 cm is van een voorwerp is, dan (then) stopt hij. Zo niet (else) rijd hij vooruit.  
 Sleep nu het ``||maqueen: motor ... move ... at speed ...||`` in het else blok.  
 
-
-``||Download||`` dit stuk code op de micro:Maqueen en kijk of die optijd stopt!  
+``|Download|`` dit stuk code op de micro:Maqueen en kijk of die optijd stopt!  
 
 *Kom je er niet uit? Kijk dan bij de hint en vraag eventueel hulp aan een begeleider*
 
@@ -90,12 +101,12 @@ basic.forever(function () {
 Nu je weet dat Maqueen optijd stop kan je de code gaan schrijven om hem voorwerpen te gaan laten ontwijken.  
 Het doel is om hem in de buurt van een obstakel achteruit te laten rijden en hem een stukje laten draaien, zodat die weer verder kan rijden.  
 
-Gooi nu eerst het ``||maqueen: motor ... stop||`` blok weg.  Plaats nu op die plek het blok ``||maqueen: motor ... move ... at speed ...||``.  
+Gooi nu eerst het ``||maqueen: motor ... stop||`` blok weg.  Plaats nu op die plek het blok ``||maqueen: motor ... move ... at speed ...||`` terug die je nog in je werkruimte had staan.    
 Vul dit blok zo in dat beide motoren (All) achteruit (Backward) op een snelheid (speed) van 50 gaan rijden.  
 Je wilt dat die 1 seconde lang achteruit rijd.    
 Plaats ``||basic:pause||`` onder ``||maqueen: motor ... move ... at speed ...||`` en vul daar 1 seconden in. 
 
-``||Download||`` dit stuk code op de micro:Maqueen en kijk of die achteruit rijdt!  
+``|Download|`` dit stuk code op de micro:Maqueen en kijk of die achteruit rijdt!  
 
 *Kom je er niet uit? Kijk dan bij de hint en vraag eventueel hulp aan een begeleider*
 
@@ -121,7 +132,7 @@ Plaats onder het 2e ``||maqueen: motor ... move ... at speed ...||`` blok een ``
 
 In theorie zou Maqueen nu bij een obstakel achteruit gaan rijden, een stukje draaien en weer verder gaan rijden vooruit.  
 
-``||Download||`` je code en test of het klopt!    
+``|Download|`` je code en bekijk of die doet wat je verwacht!    
 
 *Kom je er niet uit? Kijk dan bij de hint en vraag eventueel hulp aan een begeleider*
 
@@ -139,5 +150,7 @@ basic.forever(function () {
 })
 ```
 ## Stap 8
-Gefeliciteerd! Maqueen kan nu rondrijden, zonder tegen obstakels aan te botsen!
+Gefeliciteerd! Maqueen kan nu rondrijden zonder tegen obstakels aan te botsen!    
+
+**Challenge:** 
 
