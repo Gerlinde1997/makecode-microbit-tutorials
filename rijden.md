@@ -155,5 +155,5 @@ Gefeliciteerd, je hebt de tutorial afgerond! Maqueen kan nu rondrijden zonder te
 Voer nadat je op ``|Finish|`` hebt gedrukt de challenge uit. Probeer vooral wat verschillende dingen uit.  
 Ben je tevreden? Laat dit zien aan begeleiding.        
 
-**Challenge:** Laat Maqueen **sneller** rondrijden en laat hem **langer** achteruit rijden wanneer die een obstakel ontwijkt.
+**Challenge:** Laat Maqueen **sneller** rondrijden en laat hem **langer achteruit rijden** wanneer die een obstakel ontwijkt.
 
