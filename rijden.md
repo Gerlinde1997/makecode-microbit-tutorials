@@ -150,7 +150,10 @@ basic.forever(function () {
 })
 ```
 ## Stap 8
-Gefeliciteerd! Maqueen kan nu rondrijden zonder tegen obstakels aan te botsen!    
+Gefeliciteerd, je hebt de tutorial afgerond! Maqueen kan nu rondrijden zonder tegen obstakels aan te botsen!  
 
-**Challenge:** 
+Voer nadat je op ``|Finish|`` hebt gedrukt de challenge uit. Probeer vooral wat verschillende dingen uit.  
+Ben je tevreden? Laat dit zien aan begeleiding.        
+
+**Challenge:** Laat Maqueen **sneller** rondrijden en laat hem **langer** achteruit rijden wanneer die een obstakel ontwijkt.
 

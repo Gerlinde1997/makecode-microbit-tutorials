@@ -43,7 +43,7 @@ Goed gedaan! Nu kan iedereen zien dat je robot Maqueen heet!
 
 Natuurlijk wil iedereen ook weten hoe oud Maqueen is.    
 Om een getal te laten zien, gebruik je het blok ``||basic:show number||``.  
-Plaats deze onder het ``||basic:show string||`` blok en vul de leeftijd in die jij Maqueen wil geven. *(bijv. 1)*        
+Plaats deze onder het ``||basic:show string||`` blok en vul de leeftijd in die jij Maqueen wil geven. *(bijv. 2)*        
 
 Verbind nu de micro:bit met de computer en ``|Download|`` het programma.  
 Zie je **Maqueen** en daarna zijn leeftijd verschijnen op de micro:bit?    
