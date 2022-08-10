@@ -5,7 +5,7 @@
 In deze tutorial ga jij micro:Maqueen een naamkaartje geven!
 
 ## Stap 1
-Met het ``||basic:show string||`` kan je tekst laten zien op de micro:bit.  
+Met het ``||basic:show string||`` blok kan je tekst laten zien op de micro:bit.  
 Plaats ``||basic:show string||`` in het ``||basic:forever||`` blok.
 
 ```blocks

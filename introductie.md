@@ -59,7 +59,6 @@ De simulator is de grote micro:bit links op je scherm. Deze voert automatisch jo
 
 Je kunt de simulator **aan/uit** zetten met de meest linkse **play/stop knop**.  
 **Herstarten** doe je met het knopje rechts ernaast (de twee pijltjes).  
-Met het kevertje kun je jouw code debuggen. *Deze optie zul je later pas gaan gebruiken. Je hoeft nog niet te snappen wat het doet en hoe het werkt.*  
 Met het **luidsprekerknopje** kan je het **geluid aan/uit** zetten en met de knop daarnaast, met **het vierkantje**, kan je de simulator op **fullscreen** zetten. Als je de simlutor op fullscreen modus hebt staan, kan je dat weer weghalen door op diezelfde knop te drukken.  
 
 
