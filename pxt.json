@@ -15,7 +15,8 @@
         "introductie.md",
         "tutorial-info-cache.json",
         "naamkaart.md",
-        "rijden.md"
+        "rijden.md",
+        "IR-afstandbediening-rijden.md"
     ],
     "testFiles": [
         "test.ts"
