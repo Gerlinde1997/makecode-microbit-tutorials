@@ -95,11 +95,102 @@ IR.IR_callbackUser(function (message) {
 ```
 
 ## Stap 7
-copy paste if then, 2x motor blok & waardes links
+Nu ga je de pijl naar links programmeren.  
+Kopieer weer het ``||logic: if ... then||`` blok. De message van de pijl links is **68**. Pas deze aan op het nieuwe ``||logic: if ... then||`` blok.  
+Om Maqueen naar links te laten draaien heb je twee ``||maqueen: motor ... move ... at speed ...||`` blokken nodig, waarvan één motor vooruit en één motor achteruit draait.  
+Kopieer hiervoor het ``||maqueen: motor ... move ... at speed ...||`` blok en plaats die onder hetzelfde blok die er al staat.  
+Vul nu het bovenste ``||maqueen: motor ... move ... at speed ...||`` blok zo in dat de linker motor (Left) achteruit (Backward) draait met een snelheid (speed) van 30.  
+Vul daarna het ``||maqueen: motor ... move ... at speed ...||`` blok daaronder zo in dat de rechter motor (Right) vooruit (Forward) draait met een snelheid (speed) van 30.  
+
+``|Download|`` weer jouw code op je micro:bit en test of het werkt!
+
+*Kom je er niet uit? Kijk dan bij de hint en vraag eventueel hulp aan een begeleider*
+
+```blocks
+IR.IR_callbackUser(function (message) {
+    if (message == 70) {
+        maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CW, 100)
+    }
+    if (message == 21) {
+        maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CCW, 100)
+    }
+    if (message == 68) {
+        maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CCW, 30)
+        maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CW, 30)
+    }
+})
+```
 
 ## Stap 8
-copy paste vorige if then & waardes rechts
-& testen
+Als laatste stap van deze tutorial ga je de rechter pijl programmeren.  
+Je kunt nu het hele ``||logic: if ... then||`` blok kopiëren (duplicate) van de vorige stap.  
+Nu hoef je alleen nog maar de waardes weer aan te passen, zodat Maqueen reageert op de rechter pijl en die dan ook naar rechts draait!    
 
-## Stap 9
-Gefeliciteerd & challenge stop knop (message = 64, OK knop)
+Dit zijn de gegevens die je nodig hebt en probeer deze zelf in op de juiste plek in te vullen:    
+De message van de rechter pijl is **67**.  
+De linker motor (Left) moet vooruit (Forward) draaien met een snelheid (speed) van 30.
+De rechter motor (Right) moet achteruit (Backward) draaien met een snelheid (speed) van 30.    
+
+``|Download|`` de code op je micro:bit en test of het werkt!    
+
+*Kom je er niet uit? Kijk dan bij de hint en vraag eventueel hulp aan een begeleider*
+
+```blocks
+IR.IR_callbackUser(function (message) {
+    if (message == 70) {
+        maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CW, 100)
+    }
+    if (message == 21) {
+        maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CCW, 100)
+    }
+    if (message == 68) {
+        maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CCW, 30)
+        maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CW, 30)
+    }
+    if (message == 67) {
+        maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, 30)
+        maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CCW, 30)
+    }
+})
+```
+
+## Stap 8
+Gefeliciteerd jij kan nu de micro:Maqueen besturen met de infrarood afstandsbediening!    
+
+**Tijd voor een challenge!**  
+Laat de micro:Maqueen stoppen met rijden door op de knop met het getal 0 te drukken.  
+
+*Tip: Onderzoek eerst welke message de 0-knop verzendt (zoals in stap 1 van deze tutorial).*    
+
+*Kom je er niet uit? Kijk dan bij de hint en vraag eventueel hulp aan een begeleider*
+
+```blocks
+IR.IR_callbackUser(function (message) {
+    if (message == 70) {
+        maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CW, 100)
+    }
+    if (message == 21) {
+        maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CCW, 100)
+    }
+    if (message == 68) {
+        maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CCW, 30)
+        maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CW, 30)
+    }
+    if (message == 67) {
+        maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, 30)
+        maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CCW, 30)
+    }
+    if (message == 82) {
+        maqueen.motorStop(maqueen.Motors.All)
+    }
+})
+```
+
+## Afsluiting
+Goed gedaan! Jij kan nu Maqueen besturen met de infrarood afstandsbediening!
+
+Voer nadat je op ``|Finish|`` hebt gedrukt de nog één challenges uit. Probeer daarna vooral ook andere blokken uit die je vindt in de blokkenlade! Zo kan je misschien de afstandsbediening nog hele andere dingen laten doen bij de micro:Maqueen...
+Ben je tevreden? Laat dit zien aan begeleiding.        
+
+**Challenge:** Laat micro:Maqueen stoppen door op het OK-knopje van de afstandsbediening te drukken.  
+    
