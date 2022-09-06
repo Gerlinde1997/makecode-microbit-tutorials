@@ -189,7 +189,9 @@ IR.IR_callbackUser(function (message) {
 ## Afsluiting
 Goed gedaan! Jij kan nu Maqueen besturen met de infrarood afstandsbediening!
 
-Voer nadat je op ``|Finish|`` hebt gedrukt de nog één challenges uit. Probeer daarna vooral ook andere blokken uit die je vindt in de blokkenlade! Zo kan je misschien de afstandsbediening nog hele andere dingen laten doen bij de micro:Maqueen...
+Voer nadat je op ``|Finish|`` hebt gedrukt nog één challenges uit.  
+Probeer daarna vooral ook andere blokken uit die je vindt in de blokkenlade! Zo kan je misschien de afstandsbediening nog hele andere dingen laten doen bij de micro:Maqueen...    
+
 Ben je tevreden? Laat dit zien aan begeleiding.        
 
 **Challenge:** Laat micro:Maqueen stoppen door op het OK-knopje van de afstandsbediening te drukken.  
