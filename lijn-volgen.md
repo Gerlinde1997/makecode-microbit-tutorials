@@ -124,7 +124,11 @@ basic.forever(function () {
 ```
 
 ## Stap 5
-variabele setten
+Gefeliciteerd! Maqueen kan nu een zwarte lijn volgen!  
+Je code werkt en is in principe compleet. Toch is er nog een ding die je kan verbeteren.  
+Je zult misschien opgemerkt hebben dat je meerdere keren de snelheid hebt moeten invullen. Stel dat je er na het testen achter komt dat je Maqueen toch een andere snelheid zou laten willen rijden
+zou je dit op elke plek moeten aanpassen. Met dit relatief kleine stukje code zou dat nog te doen zijn, maar al snel is dit met grotere pogramma's niet praktisch.  
+Om dit probleem op te lossen bestaan variabelen. 
 
 ## challenge 
 -> snelheid aanpassen en extra variabele voor achteruit snelheid en zwart en wit setten
