@@ -1,22 +1,13 @@
-IR.IR_callbackUser(function (message) {
-    if (message == 70) {
+basic.forever(function () {
+    if (maqueen.readPatrol(maqueen.Patrol.PatrolLeft) == 0 && maqueen.readPatrol(maqueen.Patrol.PatrolLeft) == 0) {
         maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CW, 100)
-    }
-    if (message == 21) {
+    } else if (maqueen.readPatrol(maqueen.Patrol.PatrolLeft) == 0 && maqueen.readPatrol(maqueen.Patrol.PatrolLeft) == 1) {
+        maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, 0)
+        maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CW, 100)
+    } else if (maqueen.readPatrol(maqueen.Patrol.PatrolLeft) == 1 && maqueen.readPatrol(maqueen.Patrol.PatrolLeft) == 1) {
+        maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, 100)
+        maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CW, 0)
+    } else {
         maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CCW, 100)
     }
-    if (message == 68) {
-        maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CCW, 30)
-        maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CW, 30)
-    }
-    if (message == 67) {
-        maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, 30)
-        maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CCW, 30)
-    }
-    if (message == 82) {
-        maqueen.motorStop(maqueen.Motors.All)
-    }
-})
-basic.forever(function () {
-	
 })
