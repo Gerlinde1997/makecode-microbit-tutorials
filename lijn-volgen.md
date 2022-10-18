@@ -125,10 +125,47 @@ basic.forever(function () {
 
 ## Stap 5
 Gefeliciteerd! Maqueen kan nu een zwarte lijn volgen!  
-Je code werkt en is in principe compleet. Toch is er nog een ding die je kan verbeteren.  
+Je code werkt en is in principe compleet. Toch is er nog een ding die je kan aanpassen om de code te verbeteren.  
 Je zult misschien opgemerkt hebben dat je meerdere keren de snelheid hebt moeten invullen. Stel dat je er na het testen achter komt dat je Maqueen toch een andere snelheid zou laten willen rijden
 zou je dit op elke plek moeten aanpassen. Met dit relatief kleine stukje code zou dat nog te doen zijn, maar al snel is dit met grotere pogramma's niet praktisch.  
-Om dit probleem op te lossen bestaan variabelen. 
+In programmeren wordt er dan ook vaak gebruik gemaakt van **variabelen**. Een variabele is een naam voor een bepaalde waarde die je (vaak meerdere keren) nodig hebt in je code.  
+In jouw stuk code is een variabele voor *snelheid* handig. Zo'n variabele moet je eerst aanmaken.  
+Plaats eerst het ``||basic:on Start||`` blok, als deze er nog niet staat. Klik dan op de categorie ``||variables:Variables||`` en klik op **make a variable** (maak een variabele).  
+Vul nu de naam in van jouw variabele, in dit geval *snelheid*.  Je ziet nu meerdere nieuwe blokken verschijnen.  Je pakt eerst het blok ``||variables: set snelheid to ... ||`` en plaatst deze in ``||basic:on Start||``.  
+Nu kan je op het ``||variables: set snelheid to ... ||`` de waarde invullen voor *snelheid* en dat is in dit geval **100**.  
+Pak dan uit de categorie ``||variables:Variables||``, onder het kopje *Your Variables*, de rode ovaal met snelheid erop. Klik dit blokje op elke plek in je code waar nu 100 als snelheid staat.  
+Om te kijken of de variabele goed werkt verander je nu de snelheid naar **20** op het ``||variables: set snelheid to ... ||`` blok.  
 
-## challenge 
--> snelheid aanpassen en extra variabele voor achteruit snelheid en zwart en wit setten
+``|Download|`` nu dit stuk code op de micro:Maqueen en plaats Maqueen op het papieren met de zwarte lijnen.  
+Zie jij een verschil in de snelheid van Maqueen?    
+
+Dankzij het gebruik van een variabele, kan je nu met maar 1 kleine aanpassing de snelheid van Maqueen aanpassen.  
+Probeer nog maar eens Maqueen een andere snelheid te geven!    
+
+*Kom je er niet uit? Kijk dan bij de hint en vraag eventueel hulp aan een begeleider*
+
+```blocks
+let snelheid = 100
+basic.forever(function () {
+    if (maqueen.readPatrol(maqueen.Patrol.PatrolLeft) == 0 && maqueen.readPatrol(maqueen.Patrol.PatrolLeft) == 0) {
+        maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CW, snelheid)
+    } else if (maqueen.readPatrol(maqueen.Patrol.PatrolLeft) == 0 && maqueen.readPatrol(maqueen.Patrol.PatrolLeft) == 1) {
+        maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, 0)
+        maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CW, snelheid)
+    } else if (maqueen.readPatrol(maqueen.Patrol.PatrolLeft) == 1 && maqueen.readPatrol(maqueen.Patrol.PatrolLeft) == 1) {
+        maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, snelheid)
+        maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CW, 0)
+    } else {
+        maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CCW, snelheid)
+    }
+})
+```
+
+## Afsluiting
+Gefeliciteerd, je hebt de tutorial afgerond! Maqueen kan nu een zwarte lijn volgen en je weet nu wat variabelen zijn
+en hoe je die gebruikt bij programmeren!   
+
+Voer nadat je op ``|Finish|`` hebt gedrukt de challenge uit.  
+Is het gelukt? Laat het dan zien aan begeleiding!        
+
+**challenge:** Maak zowel voor de waarden van *zwart & wit* variabelen aan, als een *stop (snelheid = 0)* variabele en gebruikt deze in jouw code.
