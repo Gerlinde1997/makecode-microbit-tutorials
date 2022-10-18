@@ -42,12 +42,12 @@ basic.forever(function () {
 
 ## Stap 2
 Als het goed is heb je in de vorige stap ontdekt dat de sensor de waarde **0** geeft voor **zwart**. In het geval van deze sensoren geeft **wit** de waarde **1** door.  
-Vanaf deze stap ga je je code zo uitbreiden dat Maqueen een zwarte lijn blijft volgen. Dat betekent dat Maqueen voorruit rijd als de sensoren zwart zien en Maqueen moet "bijdraaien" als één van sensoren wit "ziet".   
+Vanaf deze stap ga je de code zo uitbreiden dat Maqueen een zwarte lijn blijft volgen. Dat betekent dat Maqueen vooruit rijd als de sensoren zwart zien en Maqueen moet "bijdraaien" als één van sensoren wit "ziet".   
 
 Druk op **+** aan de onderkant van het ``||logic: if ... then ... else||`` blok. Je ziet nu een **else if** gedeelte verschijnen.  
 Je kunt hier nu een extra vergelijking invoegen. Om veel tijd en moeite te besparen kan je de vergelijking van het if-gedeelte kopiëren.  
 Dit doe je door met de rechter muisknop vlakbij **and** te klikken en dan op **duplicate** (kopiëren) te drukken.  
-*(Let goed op dat je de gehele verlijking hebt gekopieerd en niet maar een stukje daarvan.)*  
+*(Let goed op dat je de gehele vergelijking hebt gekopieerd en niet maar een stukje daarvan.)*  
 Klik dit blok in het donkere ruitvormige vlakje op de regel waar **else if** staat.  
 In dit stuk ga je Mauqeen naar *links* laten bijdraaien. Dit moet Maqueen doen als hij met zijn *rechter sensor* **wit** ziet. 
 Vul nu een **1** in bij de vergelijking van de *rechter* sensor (read *right* line tracking sensor).  
@@ -127,7 +127,7 @@ basic.forever(function () {
 Gefeliciteerd! Maqueen kan nu een zwarte lijn volgen!  
 Je code werkt en is in principe compleet. Toch is er nog een ding die je kan aanpassen om de code te verbeteren.  
 Je zult misschien opgemerkt hebben dat je meerdere keren de snelheid hebt moeten invullen. Stel dat je er na het testen achter komt dat je Maqueen toch een andere snelheid zou laten willen rijden
-zou je dit op elke plek moeten aanpassen. Met dit relatief kleine stukje code zou dat nog te doen zijn, maar al snel is dit met grotere pogramma's niet praktisch.  
+zou je dit op elke plek moeten aanpassen. Met dit relatief kleine stukje code zou dat nog te doen zijn, maar al snel is dit met grotere programma's niet praktisch.  
 In programmeren wordt er dan ook vaak gebruik gemaakt van **variabelen**. Een variabele is een naam voor een bepaalde waarde die je (vaak meerdere keren) nodig hebt in je code.  
 In jouw stuk code is een variabele voor *snelheid* handig. Zo'n variabele moet je eerst aanmaken.  
 Plaats eerst het ``||basic:on Start||`` blok, als deze er nog niet staat. Klik dan op de categorie ``||variables:Variables||`` en klik op **make a variable** (maak een variabele).  
